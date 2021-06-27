@@ -1,6 +1,9 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  if('MIT License')
+  then("License: MIT")
+    else('none')
 }
 
 // TODO: Create a function that returns the license link
@@ -15,9 +18,9 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.Title}
 
-  [License](#license)
+  [License](#License)
 
-  [Contact info](#UserName)(#Email)
+  [Contact info](#UserName)
 
   [Description](#Description)
 
@@ -27,7 +30,7 @@ function generateMarkdown(data) {
 
   ## License
 
-  ${data.license}
+  ${data.License}
 
   ## Description
 
@@ -45,15 +48,7 @@ function generateMarkdown(data) {
 
   ## Contributors
 
-  ${data.contributors}
-
-  
-
-
-
- 
-
-
+  ${data.Contributors}
 
 `;
 }
