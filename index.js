@@ -9,36 +9,51 @@ const questions = [
         type: "input",
         message: "What is your Github username?",
         name: "UserName",
+        validate: (value)=>{if (value) {return true} else {return 'Please enter a response.'}},
     },
     {
         type:"input",
         message: "What is your email address?",
         name: "Email",
+        validate: (value)=>{if (value) {return true} else {return 'Please enter a response.'}},
     },
     {
         type: "input",
         message: "What is your project's title?",
         name: "Title",
+        validate: (value)=>{if (value) {return true} else {return 'Please enter a response.'}},
     },
     {
         type: "input",
         message: "Give a description of your project",
         name: "Description",
+        validate: (value)=>{if (value) {return true} else {return 'Please enter a response.'}},
     },
     {
         type: "input",
         message: "What will your project be used for?",
         name: "Usage",
+        validate: (value)=>{if (value) {return true} else {return 'Please enter a response.'}},
     },
     {
-        type: "input",
+        type: "list",
         message: "What license was used?",
-        name: "License",
+        name: "Licenses",
+        choices: [
+            'MIT License',
+            'GNU Lesser General Public License v3.0',
+            'Mozilla Public License 2.0',
+            'GNU Affero General Public License v3.0',
+            'The Unlicense',
+            'Apache License 2.0',
+            'GNU General Public License v3.0',
+        ]
     },
     {
         type: "input",
         message: "Did you have any contributors?",
         name: "Contributors",
+        validate: (value)=>{if (value) {return true} else {return 'Please enter a response.'}},
     }
 ];
 
