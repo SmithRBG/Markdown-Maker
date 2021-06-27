@@ -29,7 +29,7 @@ const questions = [
         type: "input",
         message: "What will your project be used for?",
         name: "Usage",
-    }
+    },
     {
         type: "input",
         message: "What license was used?",
@@ -44,7 +44,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile("./output/"+fileName, data, function(err) {
+    fs.writeFile("./output/" + fileName, data, function(err) {
         if(err) {
             return console.log(err);
         }
