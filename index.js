@@ -48,7 +48,7 @@ function writeToFile(fileName, data) {
         if(err) {
             return console.log(err);
         }
-        console.log("Your ReadMe file" + fileName + " was successfully written.");
+        console.log("Your ReadMe file " + fileName + " was successfully written.");
     })  
 }
 
