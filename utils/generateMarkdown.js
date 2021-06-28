@@ -3,8 +3,11 @@
 const Mit = 'https://img.shields.io/badge/License-MIT-yellow.svg'
 
 function renderLicenseBadge(license) {
-  if (License === 'MIT License'){
-    return (Mit.classList.add(Mit))
+  if (license === 'MIT License'){
+    return Mit
+  }
+  else {license != 'MIT License'}{
+    return ('')
   };
 };
 
@@ -17,22 +20,27 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
+
+//![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+//![alttext](src)
 function generateMarkdown(data) {
   return `# ${data.Title}
 
   ## Table of Contents
 
-  [License](#License)
+ * [License](#License)
 
-  [Contact info](#UserName)
+ * [Contact info](#UserName)
 
-  [Description](#Description)
+ * [Description](#Description)
 
-  [Usage](#Usage)
+ * [Usage](#Usage)
 
-  [Contributors](#contributors)
+ * [Contributors](#contributors)
 
   ## License
+
+  ![${data.License}](${renderLicenseBadge(data.License)})
 
   ${data.License}
 
