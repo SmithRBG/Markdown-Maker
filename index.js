@@ -46,8 +46,8 @@ const questions = [
             'GNU Affero General Public License v3.0',
             'The Unlicense',
             'Apache License 2.0',
-            '',
             'GNU General Public License v3.0',
+            '',
         ]
     },
     {
