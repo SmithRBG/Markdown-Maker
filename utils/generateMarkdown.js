@@ -4,8 +4,8 @@ const Mit = 'https://img.shields.io/badge/License-MIT-yellow.svg'
 
 function renderLicenseBadge(license) {
   if (License === 'MIT License'){
-    return (Mit);
-  }
+    return (Mit.classList.add(Mit))
+  };
 };
 
 // TODO: Create a function that returns the license link
