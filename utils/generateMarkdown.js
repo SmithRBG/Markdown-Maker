@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const Mit = 'https://img.shields.io/badge/License-MIT-yellow.svg';
+/* const Mit = 'https://img.shields.io/badge/License-MIT-yellow.svg';
 
 const licenseImage = {
   Img0: 'https://img.shields.io/badge/License-MIT-yellow.svg',
@@ -22,13 +22,45 @@ const licenseList = {
   five:'Apache License 2.0',
   six:'GNU General Public License v3.0',
   seven: '',
-};
+}; */
+//licenseList.zero || licenseList.one || licenseList.two || licenseList.three || licenseList.four || licenseList.five || licenseList.six
+
+const licenseList = [
+  {
+    name:'MIT License',
+    image:'https://img.shields.io/badge/License-MIT-yellow.svg',
+  },
+  {
+    name:'GNU Lesser General Public License v3.0',
+    image:'https://img.shields.io/badge/License-LGPL%20v3-blue.svg',
+  },
+  {
+    name:'Mozilla Public License 2.0',
+    image:'https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg'
+  },
+  {
+    name:'GNU Affero General Public License v3.0',
+    image:'https://img.shields.io/badge/License-AGPL%20v3-blue.svg',
+  },
+  {
+    name:'The Unlicense',
+    image:'https://img.shields.io/badge/license-Unlicense-blue.svg',
+  },
+  {
+    name:'Apache License 2.0',
+    image:'https://img.shields.io/badge/License-Apache%202.0-blue.svg',
+  },
+  {
+    name:'GNU General Public License v3.0',
+    image:'https://img.shields.io/badge/License-GPLv3-blue.svg',
+  },
+];
 
 function renderLicenseBadge(license) {
-  if (license === licenseList.zero || licenseList.one || licenseList.two || licenseList.three || licenseList.four || licenseList.five || licenseList.six){
-    return Mit
+  if (license === licenseList.name){
+    return licenseList.image
   }
-  else {license != licenseList[7]}{
+  else {license != licenseList.name}{
     return ('')
   };
 };
