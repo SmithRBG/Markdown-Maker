@@ -10,7 +10,6 @@ const licenseImage = {
   Img4: 'https://img.shields.io/badge/license-Unlicense-blue.svg',
   Img5: 'https://img.shields.io/badge/License-Apache%202.0-blue.svg',
   Img6: 'https://img.shields.io/badge/License-GPLv3-blue.svg',
-  Img7: '',
 };
 
 
@@ -22,6 +21,7 @@ const licenseList = {
   four:'The Unlicense',
   five:'Apache License 2.0',
   six:'GNU General Public License v3.0',
+  seven: '',
 };
 
 function renderLicenseBadge(license) {
