@@ -14,21 +14,20 @@ const licenseImage = {
 
 
 const licenseList = {
-  zero:'MIT License',
-  one:'GNU Lesser General Public License v3.0',
-  two:'Mozilla Public License 2.0',
-  three:'GNU Affero General Public License v3.0',
-  four:'The Unlicense',
-  five:'Apache License 2.0',
-  six:'GNU General Public License v3.0',
-  seven: '',
+  name:'MIT License',
+  name:'GNU Lesser General Public License v3.0',
+  name:'Mozilla Public License 2.0',
+  name:'GNU Affero General Public License v3.0',
+  name:'The Unlicense',
+  name:'Apache License 2.0',
+  name:'GNU General Public License v3.0',
 }; */
 //licenseList.zero || licenseList.one || licenseList.two || licenseList.three || licenseList.four || licenseList.five || licenseList.six
 
 const licenseList = [
   {
     name:'MIT License',
-    image:'https://img.shields.io/badge/License-MIT-yellow.svg',
+    image:['https://img.shields.io/badge/License-MIT-yellow.svg'],
   },
   {
     name:'GNU Lesser General Public License v3.0',
