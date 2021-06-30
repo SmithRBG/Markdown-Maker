@@ -32,29 +32,37 @@ function renderLicenseBadge(license) {
   return images;
 };
 
-
-/* function renderLicenseBadge(license) {
-  if (license === licenseList.name){
-    return licenseList.image
-  }
-  else {license != licenseList.name}{
-    return ('')
-  };
-  
-}; */
-
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  const licenseLink = ("https://opensource.org/licenses/MIT");
+  var link;
 
-  if (license === 'MIT License'){
-    return licenseLink
+  switch(license) {
+    case 'MIT License':
+      link = 'https://opensource.org/licenses/MIT';
+      break;
+    case 'GNU Lesser General Public License v3.0':
+      link = 'https://www.gnu.org/licenses/lgpl-3.0';
+      break;
+    case 'Mozilla Public License 2.0':
+      link = 'https://opensource.org/licenses/MPL-2.0';
+      break;
+    case 'GNU Affero General Public License v3.0':
+      link = 'https://www.gnu.org/licenses/agpl-3.0';
+      break;
+    case 'The Unlicense':
+      link = 'https://opensource.org/licenses/ISC';
+      break;
+    case 'Apache License 2.0':
+      link = 'https://opensource.org/licenses/Apache-2.0';
+      break;
+    case 'GNU General Public License v3.0':
+      link = 'https://www.gnu.org/licenses/gpl-3.0';
+      break;
+    default:
+      link = '';
   }
-  else {licese != 'MIT License'}{
-    return ('')
-  };
+  return link;
 }; 
 
 // TODO: Create a function that returns the license section of README
@@ -71,19 +79,20 @@ function generateMarkdown(data) {
 
   ## Table of Contents
 
- * [License](#License)
+ [License](#License)
 
- * [Contact info](#UserName)
+ [Contact info](#UserName)
 
- * [Description](#Description)
+ [Description](#Description)
 
- * [Usage](#Usage)
+ [Usage](#Usage)
 
- * [Contributors](#contributors)
+ [Contributors](#contributors)
 
   ## License
 
   ![${data.License}](${renderLicenseBadge(data.License)})
+  (${renderLicenseLink(data.license)})
 
   ${data.License}
 
