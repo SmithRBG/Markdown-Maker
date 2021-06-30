@@ -27,7 +27,7 @@ const licenseList = {
 const licenseList = [
   {
     name:'MIT License',
-    image:['https://img.shields.io/badge/License-MIT-yellow.svg'],
+    image:'https://img.shields.io/badge/License-MIT-yellow.svg',
   },
   {
     name:'GNU Lesser General Public License v3.0',
@@ -55,14 +55,25 @@ const licenseList = [
   },
 ];
 
+/* for (var i = 0; i is less than the length of licenseList; i++){
+  //check if license is equal to license[i].name
+  // if so, return the image
+ // else return an empty string
+} */
+
 function renderLicenseBadge(license) {
   if (license === licenseList.name){
+    return licenseList.image
+  }
+  if (licenseList.name === licenseList.image) {
     return licenseList.image
   }
   else {license != licenseList.name}{
     return ('')
   };
+  
 };
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
